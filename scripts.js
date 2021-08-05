@@ -4,14 +4,13 @@ const takeoffButton = document.getElementById("takeoff");
 function init () {
 
 
-
 function takeoffConfirm () {
       let confirmation = confirm("Confirm that the shuttle is ready for takeoff.");
       if (confirmation === true) {
         paragraph.innerHTML = "Shuttle in flight.";
       }
     }
-    takeoffButton.addEventListener("click", abortConfirm);
+    takeoffButton.addEventListener("click", takeoffConfirm());
 
 
 }
