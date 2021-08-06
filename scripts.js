@@ -4,6 +4,7 @@
 function init () {
 
 const takeoffButton = document.getElementById("takeoff");
+const landButton = document.getElementById("landing");
 const paragraph = document.getElementById("flightStatus");
 const shuttleBG = document.getElementById("shuttleBackground");
 const height = document.getElementById("spaceShuttleHeight");
@@ -18,6 +19,16 @@ const height = document.getElementById("spaceShuttleHeight");
         }
       }
       takeoffButton.addEventListener("click", takeoffConfirm);
+
+  function landConfirm () {
+    alert("The shuttle is landing. Landing gear engaged.");
+    paragraph.innerHTML = "The shuttle has landed.";
+    shuttleBG.style.background = "green";
+    height.innerText = "0";
+
+  }
+
+      landing.addEventListener("click", landConfirm);
 
 
 }
